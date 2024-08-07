@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  --background: #000;
+  --text-color: #fff;
+  --btn-primary: #065E7C;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--background);
+
+  display: flex;
+  color: var(--text-color);
+}
+
+
+#app {
+  box-sizing: content-box;
+  width: min(100%, 112rem);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+}
+
+header form {
+
+  display: flex;
+  gap: .8rem;
+  flex: 1;
+  justify-content: end;
+}
+
+header form .input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: end;
+}
+
+header form .input-wrapper input {
+
+  border-radius: .5rem;
+  background: #06181C;
+  padding: 1.6rem;
+  width: min(100%, 46.2rem);
+  border: none;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--text-color);
+}
+
+header form .input-wrapper input::placeholder {
+  color: #7C7C8A;
+}
+
+header form button {
+  border-radius: .5rem;
+  padding: 1.2rem 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background: var(--btn-primary);
+
+  transition: all 0.2s ease-in-out;
+}
+
+header form button:hover {
+  background-color: var(--text-color);
+  color: var(--btn-primary);
+}
+
+header form button svg path {
+  transition: all 0.2s ease-in-out;
+}
+
+header form button:hover svg path {
+  fill: var(--btn-primary)
+}
+
+
+.table-wrapper {
+  margin-top: 8rem;
+  border-radius: 12px;
+  border: solid 1px #4A808C;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  display: block;
+  overflow-y: auto;
+  max-height: 68.8rem;
+}
+
+
+table::-webkit-scrollbar {
+  position: absolute;
+  width: .6rem;
+}
+
+table::-webkit-scrollbar-thumb {
+  background: #4A808C;
+  border-radius: 10px;
+}
+
+table::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Cor ao passar o mouse sobre a parte de rolagem */
+}
+
+table::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Cor do trilho */
+}
+
+
+thead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+thead,
+tbody {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+table th:first-child {
+  width: 100%;
+
+}
+
+table th:last-child {
+  width: 17.8rem;
+}
+
+table th,
+table td {
+  padding: 2.4rem 4rem;
+}
+
+table th {
+  background-color: #092D38;
+  color: #E1E1E6;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+table .user a {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+table .user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+
+}
+
+
+
+table .user span {
+  font-weight: 400;
+  display: inline-block;
+  margin-top: .8rem;
+}
+
+table td,
+table button,
+table a {
+  color: #E1E1E6;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+table button {
+  background-color: transparent;
+  border: none;
+  color: #F75A68;
+  cursor: pointer;
+  padding: .8rem 0;
+  transition: all 0.1s ease-in-out;
+}
+
+table button:hover {
+  filter: brightness(.8);
+}
+
+
+
+table tbody tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.50);
+}
+
+table tbody tr:nth-child(even) {
+  background: #06181C;
+  border: 1px solid #4A808C;
+}
+
+
+.vazio {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background: #030B0D;
+}
+
+.vazio h1 {
+  color: #4E5455;
+
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.781px;
+  /* 61.953% */
+}
+
+.hide {
+  display: none;
+}
+
+
+.active {
+  height: 68.8rem;
+}
